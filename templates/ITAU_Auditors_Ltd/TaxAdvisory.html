@@ -1,0 +1,439 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="themexriver" />
+
+    <!-- Page Title -->
+    <title>ITAU Auditors and DPA Ltd</title>
+
+    <!-- Favicon and Touch Icons -->
+    <link href={% static "assets/images/favicon/favicon.png" %} rel="shortcut
+    icon" type="image/png" /> <link href={% static
+    "assets/images/favicon/apple-touch-icon-57x57.png" %} rel="apple-touch-icon"
+    sizes="57x57" /> <link href={%
+    static"assets/images/favicon/apple-touch-icon-72x72.png" %}
+    rel="apple-touch-icon" sizes="72x72" /> <link href={%
+    static"assets/images/favicon/apple-touch-icon-114x114.png" %}
+    rel="apple-touch-icon" sizes="114x114" /> <link href={% static
+    "assets/images/favicon/apple-touch-icon-144x144.png" %}
+    rel="apple-touch-icon" sizes="144x144" />
+
+    <!-- Icon fonts -->
+    <link href={% static "assets/css/font-awesome.min.css" %} rel="stylesheet"
+    /> <link href={% static "assets/css/flaticon.css" %} rel="stylesheet" />
+
+    <!-- Bootstrap core CSS -->
+    <link href={% static "assets/css/bootstrap.min.css" %} rel="stylesheet" />
+
+    <!-- Plugins for this template -->
+    <link href={% static "assets/css/animate.css" %} rel="stylesheet" /> <link
+    href={% static "assets/css/owl.carousel.css" %} rel="stylesheet" /> <link
+    href={% static "assets/css/owl.theme.css" %} rel="stylesheet" /> <link
+    href={% static "assets/css/slick.css" %} rel="stylesheet" /> <link href={%
+    static "assets/css/slick-theme.css" %} rel="stylesheet" /> <link href={%
+    static "assets/css/owl.transitions.css" %} rel="stylesheet" /> <link href={%
+    static "assets/css/jquery.fancybox.css" %} rel="stylesheet" /> <link href={%
+    static "assets/css/jquery.mCustomScrollbar.min.css" %} rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href={% static "assets/css/style.css" %} rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- start page-wrapper -->
+    <div class="page-wrapper">
+      <!-- start preloader -->
+      <div class="preloader">
+        <div class="preloader-inner">
+          <img src={% static "assets/images/preloader.gif" %} alt />
+        </div>
+      </div>
+      <!-- end preloader -->
+
+       <!-- Start header -->
+       <header id="header" class="site-header header-style-5">
+        <div class="topbar topbar-style-2">
+          <div class="container">
+            <div class="row">
+              <div class="col col-sm-7">
+                <div class="topbar-contact-info-wrapper">
+                  <div class="topbar-contact-info">
+                    <div>
+                      <i class="fa fa-location-arrow"></i>
+                      <div class="details">
+                        <p>{{topHeader.street_address}}</p>
+                      </div>
+                    </div>
+                    <div>
+                      <i class="fa fa-phone"></i>
+                      <div class="details">
+                        <p>{{topHeader.phone}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-sm-5">
+                <div class="social">
+                  <span>Follow: </span>
+                  <ul class="social-links">
+                    <li>
+                      
+                      <a href="{{ topHeader.facebook }}" target="_blank"><i class="fa fa-facebook"></i></a>
+                     
+                    </li>
+                    <li>
+                      
+                      <a href="{{ topHeader.twitter }}" target="_blank"><i class="fa fa-twitter"></i></a>
+                      
+                    </li>
+                    <li>
+                       <a href="{{ topHeader.linkedin }}" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                      <a href="{{ topHeader.pinterest }}" target="_blank"><i class="fa fa-pinterest"></i></a>
+                    </li>
+                    <li>
+                       <a href="{{ topHeader.rss }}" target="_blank"><i class="fa fa-rss"></i></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="language">
+        <button id="langToggle" class="btn-lang">ENG</button>
+    </div>
+              </div>
+            </div>
+          </div>
+          <!-- end container -->
+        </div>
+        <!-- end topbar -->
+
+        <div class="lower-topbar">
+          <div class="container">
+            <div class="row">
+              <div class="col col-sm-3">
+                <div class="site-logo">
+                  <img src="{{ topHeader.logo.url }}" alt="Logo" >
+                </div>
+              </div>
+              <div class="col col-sm-9">
+                <div class="awards">
+                  <div>
+                    <div class="icon"><i class="fi flaticon-title"></i></div>
+                    <div class="award-info">
+                      <h4>Global Certified</h4>
+                      <p>Consulting Company</p>
+                    </div>
+                  </div>
+                  <!-- <div>
+                    <div class="icon"><i class="fi flaticon-medal"></i></div>
+                    <div class="award-info">
+                      <h4>World 1St</h4>
+                      <p>Consulting company</p>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end lower-topbar -->
+
+        <nav class="navigation navbar navbar-default">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="open-btn">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse navigation-holder">
+              <button class="close-navbar"><i class="fa fa-close"></i></button>
+              
+              <ul class="nav navbar-nav">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about_us' %}">About</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+                <li><a href="{% url 'contact_us' %}">Contact</a></li>
+                <li><a href="{% url 'careers' %}">Careers</a></li>
+              </ul>
+            </div>
+            <!-- end of nav-collapse  cart removed -->
+            <a href="{% url 'schedule' %}" class="theme-btn-s2 request-quote">Schedule Meet</a> 
+          </div>
+          
+          <!-- end of container -->
+        </nav>
+        
+        <!-- end navigation -->
+      </header>
+      <!-- end of header -->
+
+      <!-- start page-title -->
+      <section class="page-title">
+        <div class="container">
+          <div class="row">
+            <div class="col col-xs-12">
+              <h2>Tax Advisory Service</h2>
+              <ol class="breadcrumb">
+                <li><a href="index-2.html">Home</a></li>
+                <li>Service single</li>
+              </ol>
+            </div>
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- end container -->
+      </section>
+      <!-- end page-title -->
+
+<!-- start service-single-section -->
+<section class="service-single-section section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col col-md-8 col-md-push-4">
+        <div class="service-single-content">
+          <div>
+            <img src="{% static 'assets/images/service-single-info2.jpg' %}" alt="Tax Advisory Service" />
+          </div>
+          <div class="title">
+            <h3>Tax Advisory Services</h3>
+          </div>
+          <div class="details">
+            <p>
+              ITAU AUDITORS & DPA LTD Ltd offers broad tax solutions that enhance tax planning and full compliance. Our tax experts make an all-out effort to ensure you are compliant with tax administration and save clients from huge non-compliance penalties. We also advise our clients upon the tax benefits and advantages that are offered by local tax laws. We assist our clients in monthly and/or quarterly tax computation and declaration as well.
+            </p>
+            <p>
+              Maximizing Tax Efficiency and Compliance through our Tax Advisory Team
+              We understand that navigating the complexities of tax regulations and maximizing tax efficiency is essential for businesses and individuals alike. As a leading provider of comprehensive tax advisory services, we offer tailored strategies and expert guidance to help our clients achieve their tax objectives while ensuring compliance. With our team of experienced tax professionals, we are dedicated to delivering innovative and personalized solutions that minimize tax liabilities and optimize financial outcomes.
+            </p>
+            <h3>Benefits Of Service</h3>
+            <ul>
+              <li>
+                <i class="fa fa-plus"></i> <strong>Maximized Tax Efficiency:</strong> Tailored strategies to minimize tax liabilities.
+              </li>
+              <li>
+                <i class="fa fa-plus"></i> <strong>Expert Guidance:</strong> Experienced tax professionals providing personalized solutions.
+              </li>
+              <li>
+                <i class="fa fa-plus"></i> <strong>Compliance Assurance:</strong> Ensuring adherence to tax laws and regulations.
+              </li>
+              <li>
+                <i class="fa fa-plus"></i> <strong>Strategic Tax Planning:</strong> Customized strategies to achieve tax objectives.
+              </li>
+            </ul>
+            <p>
+              Our tax advisory services are designed to optimize tax efficiency, ensure compliance, and provide strategic guidance tailored to our clients' needs. We leverage our expertise and knowledge of tax laws to deliver effective solutions that help businesses and individuals navigate the complexities of taxation.
+            </p>
+            <h4>Why Our Service</h4>
+            <p>
+              Our team consists of highly skilled tax professionals with extensive experience in tax planning, compliance, and advisory services. We combine technical expertise with industry knowledge to deliver reliable and effective tax solutions that meet our clients' objectives.
+            </p>
+            <p>
+              We offer a comprehensive range of tax advisory services, including tax planning, compliance, representation in tax audits, and strategic tax advice. Our proactive approach and commitment to client satisfaction ensure that we deliver exceptional value and support to our clients.
+            </p>
+            <p>
+              We utilize advanced tax planning tools and software to enhance accuracy and efficiency in our services. By staying abreast of regulatory changes and industry trends, we provide up-to-date advice and solutions that align with our clients' business goals and financial objectives.
+            </p>
+            <p>
+              Building strong client relationships is at the core of our service philosophy. We collaborate closely with our clients to understand their unique tax challenges and goals, offering personalized solutions and proactive support that empower them to make informed decisions and achieve sustainable tax efficiency.
+            </p>
+            <h4>Our Tax Advisory Services</h4>
+            <p>
+              <strong>Strategic Tax Planning:</strong> Customized strategies to minimize tax liabilities and optimize financial outcomes.
+            </p>
+            <p>
+              <strong>Tax Compliance:</strong> Ensuring adherence to tax laws through accurate tax preparation and filing.
+            </p>
+            <p>
+              <strong>Tax Representation:</strong> Representing clients in tax audits and disputes, ensuring fair treatment and resolution.
+            </p>
+            <p>
+              <strong>International Taxation:</strong> Advising on tax implications of international operations and cross-border transactions.
+            </p>
+            <p>
+              <strong>Tax Advisory:</strong> Providing expert advice on tax-efficient strategies and opportunities for tax savings.
+            </p>
+            <p>
+              <strong>Client Education:</strong> Empowering clients with knowledge and understanding of tax laws and implications.
+            </p>
+            <a href="#" class="theme-btn">Contact Us</a>
+          </div>
+        </div>
+        <!-- end service content -->
+      </div>
+      <!-- end col -->
+
+            <div class="col col-md-4 col-md-pull-8">
+              <div class="service-single-sidebar">
+                <div class="services-link-widget widget">
+                  <ul>
+  <li><a href="{% url 'auditAndAssurance' %}">Audit & Assurance Service</a></li>
+  <li><a href="{% url 'accountingAndFinance' %}">Accounting & Finance Service</a></li>
+  <li class="current"><a href="{% url 'taxAdvisory' %}">Tax Advisory Service</a></li>
+  <li><a href="{% url 'financialAdvisory' %}">Financial Advisory Service</a></li>
+  <li><a href="{% url 'training' %}">Corporate Training</a></li>
+  <li><a href="{% url 'managementConsulting' %}">Management Consulting Services</a></li>
+  <li><a href="{% url 'corporateSocialResponsibility' %}">Corporate Social Responsibility</a></li>
+</ul>
+                </div>
+                <div class="download-brocher-widget widget">
+                  <a href="#"
+                    ><i class="fa fa-file-pdf-o"></i> Download brochure</a
+                  >
+                </div>
+                <div class="widget contact-widget">
+                 <div class="widget contact-widget">
+  <h3>Contact us for help?</h3>
+  <p>
+   Reach out to ITAU AUDITORS & DPA LTD for expert support.
+  </p>
+</div>
+
+              </div>
+            </div>
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- end container -->
+      </section>
+      <!-- end service-single-section -->
+
+       <!-- start site-footer -->
+      <footer class="site-footer">
+        <div class="upper-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col col-md-3 col-sm-6">
+                <div class="widget about-widget">
+                  <div class="footer-logo">
+        <img src="{{ topHeader.logo_two.url }}" alt="Secondary Logo" />
+    </div>
+                  <ul class="contact-info">
+    <li>
+        <i class="fa fa-home"></i> {{ topHeader.street_address }}
+    </li>
+    <li>
+        <i class="fa fa-phone"></i> {{ topHeader.phone }}
+    </li>
+    <li>
+        <i class="fa fa-clock-o"></i> Working Hours: <br />{{ topHeader.working_hours|linebreaksbr }}
+    </li>
+</ul>
+
+                </div>
+              </div>
+
+              <div class="col col-md-3 col-sm-6">
+                <div class="widget service-links-widget">
+                  <h3>Services</h3>
+                  <ul>
+  <li><a href="{% url 'auditAndAssurance' %}">Audit & Assurance</a></li>
+  <li><a href="{% url 'accountingAndFinance' %}">Accounting & Finance</a></li>
+  <li><a href="{% url 'taxAdvisory' %}">Tax Advisory</a></li>
+  <li><a href="{% url 'financialAdvisory' %}">Financial Advisory</a></li>
+  <li><a href="{% url 'training' %}">Corporate Training</a></li>
+  <li><a href="{% url 'managementConsulting' %}">Management Consulting</a></li>
+  <li><a href="{% url 'corporateSocialResponsibility' %}">Corporate Social Responsibility</a></li>
+</ul>
+
+                </div>
+              </div>
+
+              <div class="col col-md-3 col-sm-6">
+                <div class="widget quick-links-widget">
+                 <h3>Navigation</h3>
+<ul>
+  <li><a href="{% url 'home' %}">Home</a></li>
+  <li><a href="{% url 'about_us' %}">About</a></li>
+  <li><a href="{% url 'services' %}">Services</a></li>
+  <li><a href="{% url 'careers' %}">Careers</a></li>
+  <li><a href="{% url 'schedule' %}">Schedule</a></li>
+</ul>
+<ul>
+  <li><a href="#">Gallery</a></li>
+  <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+  <li><a href="#">Privacy Policy</a></li>
+</ul>
+
+                </div>
+              </div>
+
+              <div class="col col-md-3 col-sm-6">
+                <div class="widget twitter-feed-widget">
+                 <h3>ITAU AUDITORS & DPA LTD</h3>
+<ul>
+  <li>
+    <div class="text">
+      <p>
+        Experts in audit and consultancy since 2006. Serving Rwanda and beyond with tailored solutions. #ITAU_AUDITORS_DPA_LTD
+      </p>
+    </div>
+    <div class="info-box">
+      <i class="fa fa-twitter"></i>
+      <strong><a href="#">@ITAU_AUDITORS_DPA_LTD</a></strong>
+    </div>
+  </li>
+  <li>
+    <div class="text">
+      <p>
+        Trusted consultancy driving success in public and private sectors. Discover our solutions today! #ConsultingExcellence
+      </p>
+    </div>
+    <div class="info-box">
+      <i class="fa fa-twitter"></i>
+      <strong><a href="#">@ITAU_AUDITORS_DPA_LTD</a></strong>
+    </div>
+  </li>
+</ul>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end upper-footer -->
+        <div class="copyright-info">
+    <div class="container">
+      <p>
+        &copy; <span id="current-year"></span> ITAU AUDITORS & DPA LTD. All rights reserved.
+      </p>
+    </div>
+  </div>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+      </footer>
+      <!-- end site-footer -->
+    </div>
+    <!-- end of page-wrapper -->
+
+    <!-- All JavaScript files
+    ================================================== -->
+    <script src={% static "assets/js/jquery.min.js" %}></script>
+    <script src={% static "assets/js/bootstrap.min.js" %}></script>
+
+    <!-- Plugins for this template -->
+    <script src={% static "assets/js/jquery-plugin-collection.js" %}></script>
+    <script src={% static "assets/js/jquery.mCustomScrollbar.js" %}></script>
+
+    <!-- Custom script for this template -->
+    <script src={% static "assets/js/script.js" %}></script>
+  </body>
+
+  <!-- service-single 19:58:31 GMT -->
+</html>

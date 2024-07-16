@@ -1,0 +1,501 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="themexriver" />
+
+  <!-- Page Title -->
+  <title>ITAU Auditors and DPA Ltd</title>
+
+  <!-- Favicon and Touch Icons -->
+  <link href={% static "assets/images/favicon/favicon.png" %} rel="shortcut
+  icon" type="image/png" /> <link href={% static
+  "assets/images/favicon/apple-touch-icon-57x57.png" %} rel="apple-touch-icon"
+  sizes="57x57" /> <link href={%
+  static"assets/images/favicon/apple-touch-icon-72x72.png" %}
+  rel="apple-touch-icon" sizes="72x72" /> <link href={%
+  static"assets/images/favicon/apple-touch-icon-114x114.png" %}
+  rel="apple-touch-icon" sizes="114x114" /> <link href={% static
+  "assets/images/favicon/apple-touch-icon-144x144.png" %}
+  rel="apple-touch-icon" sizes="144x144" />
+
+  <!-- Icon fonts -->
+  <link href={% static "assets/css/font-awesome.min.css" %} rel="stylesheet" />
+  <link href={% static "assets/css/flaticon.css" %} rel="stylesheet" />
+
+  <!-- Bootstrap core CSS -->
+  <link href={% static "assets/css/bootstrap.min.css" %} rel="stylesheet" />
+
+  <!-- Plugins for this template -->
+  <link href={% static "assets/css/animate.css" %} rel="stylesheet" />
+  <link href={% static "assets/css/owl.carousel.css" %} rel="stylesheet" />
+  <link href={% static "assets/css/owl.theme.css" %} rel="stylesheet" />
+  <link href={% static "assets/css/slick.css" %} rel="stylesheet" />
+  <link href={% static "assets/css/slick-theme.css" %} rel="stylesheet" />
+  <link href={% static "assets/css/owl.transitions.css" %} rel="stylesheet" />
+  <link href={% static "assets/css/jquery.fancybox.css" %} rel="stylesheet" />
+  <link href={% static "assets/css/jquery.mCustomScrollbar.min.css" %} rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href={% static "assets/css/style.css" %} rel="stylesheet" />
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <!-- start page-wrapper -->
+  <div class="page-wrapper">
+    <!-- start preloader -->
+    <div class="preloader">
+      <div class="preloader-inner">
+        <img src={% static "assets/images/preloader.gif" %} alt />
+      </div>
+    </div>
+    <!-- end preloader -->
+
+    <!-- Start header -->
+    <header id="header" class="site-header header-style-5">
+      <div class="topbar topbar-style-2">
+        <div class="container">
+          <div class="row">
+            <div class="col col-sm-7">
+              <div class="topbar-contact-info-wrapper">
+                <div class="topbar-contact-info">
+                  <div>
+                    <i class="fa fa-location-arrow"></i>
+                    <div class="details">
+                      <p>{{topHeader.street_address}}</p>
+                    </div>
+                  </div>
+                  <div>
+                    <i class="fa fa-phone"></i>
+                    <div class="details">
+                      <p>{{topHeader.phone}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-5">
+              <div class="social">
+                <span>Follow: </span>
+                <ul class="social-links">
+                  <li>
+                    
+                    <a href="{{ topHeader.facebook }}" target="_blank"><i class="fa fa-facebook"></i></a>
+                   
+                  </li>
+                  <li>
+                    
+                    <a href="{{ topHeader.twitter }}" target="_blank"><i class="fa fa-twitter"></i></a>
+                    
+                  </li>
+                  <li>
+                     <a href="{{ topHeader.linkedin }}" target="_blank"><i class="fa fa-linkedin"></i></a>
+                  </li>
+                  <li>
+                    <a href="{{ topHeader.pinterest }}" target="_blank"><i class="fa fa-pinterest"></i></a>
+                  </li>
+                  <li>
+                     <a href="{{ topHeader.rss }}" target="_blank"><i class="fa fa-rss"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="language">
+      <button id="langToggle" class="btn-lang">ENG</button>
+  </div>
+            </div>
+          </div>
+        </div>
+        <!-- end container -->
+      </div>
+      <!-- end topbar -->
+
+      <div class="lower-topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col col-sm-3">
+              <div class="site-logo">
+                <img src="{{ topHeader.logo.url }}" alt="Logo" >
+              </div>
+            </div>
+            <div class="col col-sm-9">
+              <div class="awards">
+                <div>
+                  <div class="icon"><i class="fi flaticon-title"></i></div>
+                  <div class="award-info">
+                    <h4>Global Certified</h4>
+                    <p>Consulting Company</p>
+                  </div>
+                </div>
+                <!-- <div>
+                  <div class="icon"><i class="fi flaticon-medal"></i></div>
+                  <div class="award-info">
+                    <h4>World 1St</h4>
+                    <p>Consulting company</p>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end lower-topbar -->
+
+      <nav class="navigation navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="open-btn">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse navigation-holder">
+            <button class="close-navbar"><i class="fa fa-close"></i></button>
+            
+            <ul class="nav navbar-nav">
+              <li><a href="{% url 'home' %}">Home</a></li>
+              <li><a href="{% url 'about_us' %}">About</a></li>
+              <li><a href="{% url 'services' %}">Services</a></li>
+              <li><a href="{% url 'blog' %}">Blog</a></li>
+              <li><a href="{% url 'contact_us' %}">Contact</a></li>
+              <li><a href="{% url 'careers' %}">Careers</a></li>
+            </ul>
+          </div>
+          <!-- end of nav-collapse  cart removed -->
+          <a href="{% url 'schedule' %}" class="theme-btn-s2 request-quote">Schedule Meet</a> 
+        </div>
+        
+        <!-- end of container -->
+      </nav>
+      
+      <!-- end navigation -->
+    </header>
+    <!-- end of header -->
+
+    <!-- start page-title -->
+    <section class="page-title">
+      <div class="container">
+        <div class="row">
+          <div class="col col-xs-12">
+            <h2>Careers</h2>
+            <ol class="breadcrumb">
+              <li><a href="{% url 'home' %}">Home</a></li>
+              <li>Careers</li>
+            </ol>
+          </div>
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </section>
+    <!-- end page-title -->
+
+
+    <style>
+      /*--------------------------------------------------------------
+# Section Title
+--------------------------------------------------------------*/
+      .section-title {
+        text-align: left;
+        /* Aligns text to the left */
+        margin-bottom: 40px;
+        /* Adds bottom margin for spacing */
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .section-title p {
+        font-size: 16px;
+      }
+
+
+      /*--------------------------------------------------------------
+# Career Job
+--------------------------------------------------------------*/
+      .career-job {
+        margin-bottom: 30px;
+        padding: 20px;
+        border: 1px solid #e9e9e9;
+        border-radius: 5px;
+        transition: all 0.3s;
+        width: 100%;
+        text-align: left;
+        /* Aligns text to the left */
+        display: flex;
+        flex-direction: column;
+      }
+
+      .career-job h3 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      .career-job p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .career-job .btn {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 10px 20px;
+        background-color: rgba(5, 24, 41, 0.9);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        align-self: flex-end;
+        /* Aligns button to the right */
+      }
+
+      .career-job .btn:hover {
+        background-color: #fdc900;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 991px) {
+        .section-title h2 {
+          font-size: 26px;
+          padding-top: 25px;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+
+        .career-job h3 {
+          font-size: 22px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .section-title p {
+          font-size: 14px;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+
+        .career-job p {
+          font-size: 14px;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+
+        .career-job .btn {
+          font-size: 12px;
+        }
+      }
+    </style>
+
+
+
+    <!-- Career Section -->
+    <section class="fun-fact">
+      <div class="container">
+          <div class="row start-count">
+              <div class="col-12">
+                  <div class="section-title">
+                      <h2>Join Our Team</h2>
+                      <p>
+                          Explore opportunities at ITAU AUDITORS & DPA LTD, a leading Kigali-based consultancy since 2006. Join us
+                          in delivering excellence in financial and advisory services across Rwanda and beyond.
+                      </p>
+                  </div>
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <!-- Job Listings -->
+                          {% for career in careers %}
+                          <div class="career-job">
+                              <h3>{{ career.title }}</h3>
+                              <p>{{ career.description }}</p>
+                              <p><strong>Posted on:</strong> {{ career.date|date:"d M, Y" }}</p>
+                              <a href="{{ career.application_link }}" class="btn btn-primary" target="_blank">Apply Now</a>
+                          </div>
+                          {% endfor %}
+                          <!-- End Job Listings -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- end container -->
+  </section>
+  <!-- End Career Section -->
+
+
+
+    <!-- start before footer  -->
+    <section class="section-padding partners partners-bg">
+      <h2 class="hidden">Partners</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col col-xs-12">
+            <div class="partners-slider">
+              <div class="grid">
+                <!-- style  -->
+              </div>
+              <div class="grid">
+                <!-- style  -->
+              </div>
+              <div class="grid">
+                <!-- style  -->
+              </div>
+              <div class="grid">
+                <!-- style  -->
+              </div>
+              <div class="grid">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- end before footer -->
+
+
+
+    <!-- start site-footer -->
+    <footer class="site-footer">
+      <div class="upper-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col col-md-3 col-sm-6">
+              <div class="widget about-widget">
+                <div class="footer-logo">
+                  <img src="{{ topHeader.logo_two.url }}" alt="Secondary Logo" />
+                </div>
+                <ul class="contact-info">
+                  <li>
+                    <i class="fa fa-home"></i> {{ topHeader.street_address }}
+                  </li>
+                  <li>
+                    <i class="fa fa-phone"></i> {{ topHeader.phone }}
+                  </li>
+                  <li>
+                    <i class="fa fa-clock-o"></i> Working Hours: <br />{{ topHeader.working_hours|linebreaksbr }}
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+
+            <div class="col col-md-3 col-sm-6">
+              <div class="widget service-links-widget">
+                <h3>Services</h3>
+                <ul>
+                  <li><a href="{% url 'auditAndAssurance' %}">Audit & Assurance</a></li>
+                  <li><a href="{% url 'accountingAndFinance' %}">Accounting & Finance</a></li>
+                  <li><a href="{% url 'taxAdvisory' %}">Tax Advisory</a></li>
+                  <li><a href="{% url 'financialAdvisory' %}">Financial Advisory</a></li>
+                  <li><a href="{% url 'training' %}">Corporate Training</a></li>
+                  <li><a href="{% url 'managementConsulting' %}">Management Consulting</a></li>
+                  <li><a href="{% url 'corporateSocialResponsibility' %}">Corporate Social Responsibility</a></li>
+                </ul>
+
+              </div>
+            </div>
+
+            <div class="col col-md-3 col-sm-6">
+              <div class="widget quick-links-widget">
+                <h3>Navigation</h3>
+                <ul>
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="{% url 'about_us' %}">About</a></li>
+                  <li><a href="{% url 'services' %}">Services</a></li>
+                  <li><a href="{% url 'careers' %}">Careers</a></li>
+                  <li><a href="{% url 'schedule' %}">Schedule</a></li>
+                </ul>
+                <ul>
+                  <li><a href="#">Gallery</a></li>
+                  <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+
+              </div>
+            </div>
+
+            <div class="col col-md-3 col-sm-6">
+              <div class="widget twitter-feed-widget">
+                <h3>ITAU AUDITORS & DPA LTD</h3>
+                <ul>
+                  <li>
+                    <div class="text">
+                      <p>
+                        Experts in audit and consultancy since 2006. Serving Rwanda and beyond with tailored solutions.
+                        #ITAU_AUDITORS_DPA_LTD
+                      </p>
+                    </div>
+                    <div class="info-box">
+                      <i class="fa fa-twitter"></i>
+                      <strong><a href="#">@ITAU_AUDITORS_DPA_LTD</a></strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="text">
+                      <p>
+                        Trusted consultancy driving success in public and private sectors. Discover our solutions today!
+                        #ConsultingExcellence
+                      </p>
+                    </div>
+                    <div class="info-box">
+                      <i class="fa fa-twitter"></i>
+                      <strong><a href="#">@ITAU_AUDITORS_DPA_LTD</a></strong>
+                    </div>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end upper-footer -->
+      <div class="copyright-info">
+        <div class="container">
+          <p>
+            &copy; <span id="current-year"></span> ITAU AUDITORS & DPA LTD. All rights reserved.
+          </p>
+        </div>
+      </div>
+      <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+      </script>
+    </footer>
+    <!-- end site-footer -->
+  </div>
+  <!-- end of page-wrapper -->
+
+  <!-- All JavaScript files
+    ================================================== -->
+  <script src={% static "assets/js/jquery.min.js" %}></script>
+  <script src={% static "assets/js/bootstrap.min.js" %}></script>
+
+  <!-- Plugins for this template -->
+  <script src={% static "assets/js/jquery-plugin-collection.js" %}></script>
+  <script src={% static "assets/js/jquery.mCustomScrollbar.js" %}></script>
+
+  <!-- Custom script for this template -->
+  <script src={% static "assets/js/script.js" %}></script>
+</body>
+
+<!-- about 19:58:24 GMT -->
+
+</html>
