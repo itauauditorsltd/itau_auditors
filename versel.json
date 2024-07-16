@@ -1,4 +1,5 @@
-  {
+{
+    "version": 2,
     "builds": [
       {
         "src": "build_files.sh",
@@ -8,19 +9,22 @@
         }
       },
       {
-        "src": "/itau_auditors/wsgi.py",
+        "src": "itau_auditors/wsgi.py",
         "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb" }
+        "config": {
+          "maxLambdaSize": "15mb",
+          "runtime": "python3.9"
+        }
       }
     ],
     "routes": [
       {
-        "src": "/(.*)",
-        "dest": "itau_auditors/wsgi.py"
-      },
-      {
         "src": "/static/(.*)",
         "dest": "/static/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "itau_auditors/wsgi.py"
       }
     ]
   }
