@@ -87,6 +87,7 @@ def contact_us(request):
 
 def blogPost(request):
     posts = BlogPost.objects.order_by('-date')
+    postrecent = BlogPost.objects.order_by('-date')[:6]
     categories = BlogPost.objects.values('category').annotate(count=Count('category'))
 
     # Fetching archive data and grouping by year and month
@@ -117,6 +118,7 @@ def blogPost(request):
     return render(request, 'ITAU_Auditors_Ltd/blog-right-sidebar.html', {
         'topHeader': topHeader,
         'posts': posts,
+        'postrecent': postrecent,
         'categories': categories,
         'archive_dates': archive_with_month_names,
         'all_tags': all_tags
@@ -131,8 +133,9 @@ def blogPost(request):
 
 def single_blog(request, post_id):
     post = get_object_or_404(BlogPost, pk=post_id)
+    posts = BlogPost.objects.order_by('-date')[:4]
     topHeader = CompanyInfo.objects.first()
-    return render(request, 'ITAU_Auditors_Ltd/blog-details.html', {'post': post, 'topHeader': topHeader})
+    return render(request, 'ITAU_Auditors_Ltd/blog-details.html', {'post': post, 'posts': posts, 'topHeader': topHeader})
 
 def like_post(request, post_id):
     post = get_object_or_404(BlogPost, id=post_id)

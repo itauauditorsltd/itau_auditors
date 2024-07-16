@@ -326,37 +326,19 @@
                 </ul>
               </div>
               <div class="widget recent-post-widget">
-                <h3>Recent post</h3>
+                <h3>Recent Posts</h3>
                 <ul>
+                  {% for post in posts %}
                   <li>
                     <div class="post-pic">
-                      <img src={% static "assets/images/blog/thumb/img-1.jpg" %} alt />
+                      <img src="{{ post.image.url }}" alt="{{ post.title }}" />
                     </div>
                     <div class="details">
-                      <h4>
-                        <a href="#">Micenas placerat nibh loreming fentum</a>
-                      </h4>
-                      <span>Sep 25, 2016</span>
+                      <h4><a href="#">{{ post.title }}</a></h4>
+                      <span>{{ post.date|date:"M d, Y" }}</span>
                     </div>
                   </li>
-                  <li>
-                    <div class="post-pic">
-                      <img src={% static "assets/images/blog/thumb/img-2.jpg" %} alt />
-                    </div>
-                    <div class="details">
-                      <h4><a href="#">Integer suscipit sit amet</a></h4>
-                      <span>Sep 25, 2016</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="post-pic">
-                      <img src={% static "assets/images/blog/thumb/img-3.jpg" %} alt />
-                    </div>
-                    <div class="details">
-                      <h4><a href="#">Praeent vehicula neget tempus</a></h4>
-                      <span>Sep 25, 2016</span>
-                    </div>
-                  </li>
+                  {% endfor %}
                 </ul>
               </div>
               <div class="widget archive-widget">
