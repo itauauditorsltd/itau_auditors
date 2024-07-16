@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Exit immediately if a command exits with a non-zero status.
+set -e
+
 # Ensure pip is installed
 python3.9 -m ensurepip --upgrade
 python3.9 -m pip install --upgrade pip
