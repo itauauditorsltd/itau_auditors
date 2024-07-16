@@ -1,4 +1,10 @@
-# build_files.sh
 #!/bin/bash
+
+# Install dependencies
 pip install -r requirements.txt
-python3.9 manage.py collectstatic --noinput
+
+# Run migrations
+python manage.py migrate
+
+# Collect static files
+python manage.py collectstatic --noinput
