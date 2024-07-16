@@ -10,6 +10,7 @@ class CompanyInfo(models.Model):
     phone = models.CharField(max_length=20)
     working_hours = models.CharField(max_length=100,  null=True, blank=True)
     email = models.CharField(max_length=100,  null=True, blank=True)
+    brochure = models.FileField(upload_to='brochures/', null=True, blank=True)
     
     facebook = models.URLField(max_length=200, blank=True, null=True)
     twitter = models.URLField(max_length=200, blank=True, null=True)

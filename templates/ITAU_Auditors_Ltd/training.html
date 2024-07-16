@@ -333,8 +333,12 @@
 
               </div>
               <div class="download-brocher-widget widget">
-                <a href="#"><i class="fa fa-file-pdf-o"></i> Download brochure</a>
-              </div>
+                {% if topHeader.brochure %}
+                    <a href="{{ topHeader.brochure.url }}"><i class="fa fa-file-pdf-o"></i> Download brochure</a>
+                {% else %}
+                <a href="#"><i class="fa fa-file-pdf-o"></i>Brochure not available</a>
+                {% endif %}
+            </div>
               <div class="widget contact-widget">
                 <div class="widget contact-widget">
                   <h3>Contact us for help?</h3>
