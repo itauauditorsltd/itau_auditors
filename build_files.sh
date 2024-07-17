@@ -10,7 +10,8 @@ python3.9 -m pip install --upgrade pip
 # Install dependencies
 pip install -r requirements.txt
 
-# Run migrations
+# Make and apply migrations
+python3.9 manage.py makemigrations
 python3.9 manage.py migrate
 
 # Collect static files
