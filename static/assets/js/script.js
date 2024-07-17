@@ -750,105 +750,105 @@
   /*------------------------------------------
         = CONTACT FORM SUBMISSION
     -------------------------------------------*/
-  if ($("#contact-form").length) {
-    $("#contact-form").validate({
-      rules: {
-        name: {
-          required: true,
-          minlength: 2,
-        },
+  // if ($("#contact-form").length) {
+  //   $("#contact-form").validate({
+  //     rules: {
+  //       name: {
+  //         required: true,
+  //         minlength: 2,
+  //       },
 
-        email: "required",
+  //       email: "required",
 
-        phone: "required",
+  //       phone: "required",
 
-        select: "required",
-      },
+  //       select: "required",
+  //     },
 
-      messages: {
-        name: "Please enter your name",
-        email: "Please enter your email",
-        phone: "Please enter your phone",
-        select: "Select an item",
-      },
+  //     messages: {
+  //       name: "Please enter your name",
+  //       email: "Please enter your email",
+  //       phone: "Please enter your phone",
+  //       select: "Select an item",
+  //     },
 
-      submitHandler: function (form) {
-        $.ajax({
-          type: "POST",
-          url: "mail.php",
-          data: $(form).serialize(),
-          success: function () {
-            $("#loader").hide();
-            $("#success").slideDown("slow");
-            setTimeout(function () {
-              $("#success").slideUp("slow");
-            }, 3000);
-            form.reset();
-          },
-          error: function () {
-            $("#loader").hide();
-            $("#error").slideDown("slow");
-            setTimeout(function () {
-              $("#error").slideUp("slow");
-            }, 3000);
-          },
-        });
-        return false; // required to block normal submit since you used ajax
-      },
-    });
-  }
+  //     submitHandler: function (form) {
+  //       $.ajax({
+  //         type: "POST",
+  //         url: "mail.php",
+  //         data: $(form).serialize(),
+  //         success: function () {
+  //           $("#loader").hide();
+  //           $("#success").slideDown("slow");
+  //           setTimeout(function () {
+  //             $("#success").slideUp("slow");
+  //           }, 3000);
+  //           form.reset();
+  //         },
+  //         error: function () {
+  //           $("#loader").hide();
+  //           $("#error").slideDown("slow");
+  //           setTimeout(function () {
+  //             $("#error").slideUp("slow");
+  //           }, 3000);
+  //         },
+  //       });
+  //       return false; 
+  //     },
+  //   });
+  // }
 
   // Contact page form
-  if ($("#contact-form-s2").length) {
-    $("#contact-form-s2").validate({
-      rules: {
-        f_name: {
-          required: true,
-          minlength: 2,
-        },
+  // if ($("#contact-form-s2").length) {
+  //   $("#contact-form-s2").validate({
+  //     rules: {
+  //       f_name: {
+  //         required: true,
+  //         minlength: 2,
+  //       },
 
-        l_name: {
-          required: true,
-          minlength: 2,
-        },
+  //       l_name: {
+  //         required: true,
+  //         minlength: 2,
+  //       },
 
-        email: "required",
+  //       email: "required",
 
-        phone: "required",
-      },
+  //       phone: "required",
+  //     },
 
-      messages: {
-        f_name: "Please enter your First name",
-        l_name: "Please enter your Last name",
-        email: "Please enter your email",
-        phone: "Please enter your phone",
-      },
+  //     messages: {
+  //       f_name: "Please enter your First name",
+  //       l_name: "Please enter your Last name",
+  //       email: "Please enter your email",
+  //       phone: "Please enter your phone",
+  //     },
 
-      submitHandler: function (form) {
-        $.ajax({
-          type: "POST",
-          url: "mail-2.php",
-          data: $(form).serialize(),
-          success: function () {
-            $("#loader").hide();
-            $("#success").slideDown("slow");
-            setTimeout(function () {
-              $("#success").slideUp("slow");
-            }, 3000);
-            form.reset();
-          },
-          error: function () {
-            $("#loader").hide();
-            $("#error").slideDown("slow");
-            setTimeout(function () {
-              $("#error").slideUp("slow");
-            }, 3000);
-          },
-        });
-        return false; // required to block normal submit since you used ajax
-      },
-    });
-  }
+  //     submitHandler: function (form) {
+  //       $.ajax({
+  //         type: "POST",
+  //         url: "mail-2.php",
+  //         data: $(form).serialize(),
+  //         success: function () {
+  //           $("#loader").hide();
+  //           $("#success").slideDown("slow");
+  //           setTimeout(function () {
+  //             $("#success").slideUp("slow");
+  //           }, 3000);
+  //           form.reset();
+  //         },
+  //         error: function () {
+  //           $("#loader").hide();
+  //           $("#error").slideDown("slow");
+  //           setTimeout(function () {
+  //             $("#error").slideUp("slow");
+  //           }, 3000);
+  //         },
+  //       });
+  //       return false; 
+  //     },
+  //   });
+  // }
 
   /*------------------------------------------
         = STYLE SWITCHER

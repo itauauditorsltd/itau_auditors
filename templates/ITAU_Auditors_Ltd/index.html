@@ -628,10 +628,16 @@
 
               <div class="contact-form-s1 form">
                 <form
-                  method="post"
+                action="https://api.web3forms.com/submit" method="POST"
                   id="contact-form"
                   class="wpcf7-form contact-validation-active"
                 >
+
+                 <!-- Replace with your Access Key -->
+                 <input type="hidden" name="access_key" value="ea0df28c-3bb5-4754-943f-9235ef2d018a">
+                    
+                 <!-- Add hidden input for required redirect URL -->
+                 <input type="hidden" name="redirect" value="http://itauauditorsltd.com">
                   <div>
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" />
