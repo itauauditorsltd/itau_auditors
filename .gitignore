@@ -1,1 +1,3 @@
 .vercel
+# Ignore static files
+staticfiles/
