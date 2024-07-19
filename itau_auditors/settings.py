@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "itau_app",
+    "storages",
 ]
 
 MIDDLEWARE = [
@@ -130,11 +131,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+
+
 STATIC_URL = "static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-
-
 
 
 MEDIA_URL = '/media/'
@@ -144,3 +145,39 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+# AWS configuration
+
+
+AWS_ACCESS_KEY_ID = 'AKIAXYKJRUQ752IR4REC' 
+AWS_SECRET_ACCESS_KEY = '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' 
+
+
+
+# Basic Storage configuration for Amazon S3 (Irrespective of Django versions)
+
+
+
+AWS_STORAGE_BUCKET_NAME = 'itauauditorsltdfiles' # - Enter your S3 bucket name HERE
+
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+AWS_S3_FILE_OVERWRITE = False
+
+
+
+
+STORAGES = {
+
+    # Media file (image) management   
+    "default": {
+        "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
+    },
+    
+    # CSS and JS file management
+    "staticfiles": {
+        "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
+    },
+}
+
