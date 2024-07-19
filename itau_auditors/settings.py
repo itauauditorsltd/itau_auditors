@@ -159,15 +159,14 @@ AWS_S3_FILE_OVERWRITE = False
 
 
 # Static files (CSS, JavaScript, Images)
-STATIC_URL = "https://%s.s3.amazonaws.com/static/" % AWS_STORAGE_BUCKET_NAME
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = None  # Not needed when using S3 for static files
+
 
 # Media files (user uploads)
-MEDIA_URL = 'https://%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-MEDIA_ROOT = None  # Not needed when using S3 for media files
 
 
 # Default primary key field type
