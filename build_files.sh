@@ -15,4 +15,7 @@ python3.9 manage.py makemigrations
 python3.9 manage.py migrate
 
 # Collect static files
-python3.9 manage.py collectstatic --noinput
+python3.9 manage.py collectstatic --noinput --clear
+
+# Ensure the output directory exists
+mkdir -p staticfiles_build
