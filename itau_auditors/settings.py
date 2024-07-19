@@ -148,25 +148,18 @@ USE_TZ = True
 
 
 # AWS configuration
-# AWS S3 settings
-AWS_ACCESS_KEY_ID = 'AKIAXYKJRUQ752IR4REC' 
-AWS_SECRET_ACCESS_KEY = 'WIiRmMrVxiyMuutEI1dc+64mRZntUddBWFeaYG6f' 
-AWS_STORAGE_BUCKET_NAME = 'itauauditorsltdfiles' # - Enter your S3 bucket name HERE
-
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-
-AWS_S3_FILE_OVERWRITE = False
-
 
 # Static files (CSS, JavaScript, Images)
-AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
-STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_ACCESS_KEY_ID = 'AKIAXYKJRUQ752IR4REC'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'itauauditorsltdfiles'
 
 # Media files (user uploads)
-MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
