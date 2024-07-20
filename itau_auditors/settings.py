@@ -163,11 +163,6 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 
-
-# # Static files settings
-# STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
-# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
 # # Media files settings
 # MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
 # DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
