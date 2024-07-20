@@ -133,9 +133,9 @@ USE_TZ = True
 
 
 
-# STATIC_URL = "static/"
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATIC_URL = "static/"
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 
 # MEDIA_URL = '/media/'
@@ -148,18 +148,29 @@ USE_TZ = True
 
 
 # AWS S3 settings
-AWS_ACCESS_KEY_ID = 'AKIAXYKJRUQ752IR4REC'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'itauauditorsltdfiles'
-AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
-# Static files settings
-STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-# Media files settings
-MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
+
+AWS_ACCESS_KEY_ID = 'AKIAXYKJRUQ736NI7Z4P'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'itauauditors3'
+# AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+AWS_S3_REGION_NAME = 'eu-north-1'
+AWS_QUERYSTRING_AUTH = False
+AWS_SECURITY_TOKEN_IGNORE_ENVIRONMENT = True
+AWS_IGNORE_ENVIRONMENT_CREDENTIALS = True
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+
+
+# # Static files settings
+# STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+# # Media files settings
+# MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
