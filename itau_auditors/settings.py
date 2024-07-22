@@ -1,5 +1,7 @@
 import os
 from pathlib import Path
+import boto3
+from botocore.client import Config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -82,6 +84,10 @@ AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
 AWS_DEFAULT_ACL = 'public-read'
 
+
+# Configure boto3 to use signature version 's3v4'
+s3_config = Config(signature_version='s3v4')
+boto3.client('s3', config=s3_config)
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
