@@ -79,35 +79,32 @@ USE_TZ = True
 
 
 # AWS S3 settings
-
-
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-
 AWS_ACCESS_KEY_ID = 'AKIAXYKJRUQ736NI7Z4P'
 AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'itauauditors3'
 AWS_S3_REGION_NAME = 'eu-north-1'
-AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com'
+AWS_QUERYSTRING_AUTH = False
+AWS_S3_SIGNATURE_VERSION = 's3v4'
 
-AWS_DEFAULT_ACL = 'public-read'
+# STORAGES configuration for Django 5
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+    },
+    "staticfiles": {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+    },
+}
 
-
-# # Configure boto3 to use signature version 's3v4'
-# s3_config = Config(signature_version='s3v4')
-# boto3.client('s3', config=s3_config)
-
-# Static files (CSS, JavaScript, Images)
 STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
+STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = BASE_DIR / 'staticfiles_build' / 'static'
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
 
 
 
