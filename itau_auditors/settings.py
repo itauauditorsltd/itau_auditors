@@ -5,7 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = "django-insecure--mb6qy3qap=b2i8f*y(^5lvrdq4q9rfib+==(8(g=$u1d-m3pi"
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -79,7 +79,7 @@ AWS_SECRET_ACCESS_KEY = 'tep5kOF90sD65xfqIfi7YCDA6m4GQifETT1oDIn6'
 AWS_STORAGE_BUCKET_NAME = 'itauauditors3'
 AWS_S3_REGION_NAME = 'eu-north-1'
 AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
-AWS_QUERYSTRING_AUTH = False
+# AWS_QUERYSTRING_AUTH = False
 AWS_DEFAULT_ACL = None
 
 
@@ -94,6 +94,21 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Logging configuration for debugging
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'DEBUG',
+    },
+}
 
 
 
