@@ -7,11 +7,8 @@ jmespath==1.0.1
 pillow==10.3.0
 psycopg2-binary==2.9.9
 python-dateutil==2.9.0
-s3transfer==0.10.2
+# s3transfer==0.10.2  # Remove this line to avoid conflict
 six==1.16.0
 sqlparse==0.5.0
 tzdata==2024.1
 urllib3<2.0  # Adjust the version constraint here
-
-
-
