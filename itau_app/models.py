@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.core.files.storage import default_storage
 
 class CompanyInfo(models.Model):
     logo = models.ImageField(upload_to='logos/')
