@@ -75,7 +75,17 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
 
+
+
+
 # AWS S3 settings
+
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
 AWS_ACCESS_KEY_ID = 'AKIAXYKJRUQ736NI7Z4P'
 AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'itauauditors3'
@@ -85,9 +95,9 @@ AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 AWS_DEFAULT_ACL = 'public-read'
 
 
-# Configure boto3 to use signature version 's3v4'
-s3_config = Config(signature_version='s3v4')
-boto3.client('s3', config=s3_config)
+# # Configure boto3 to use signature version 's3v4'
+# s3_config = Config(signature_version='s3v4')
+# boto3.client('s3', config=s3_config)
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
@@ -96,25 +106,9 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# Logging configuration for debugging
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'root': {
-        'handlers': ['console'],
-        'level': 'DEBUG',
-    },
-}
 
 
 
