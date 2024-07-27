@@ -11,32 +11,18 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentLang = 'en';
 
     langToggle.addEventListener('click', function() {
-        if (currentLang === 'en') {
-            currentLang = 'fr';
-            langToggle.textContent = 'FRE';
-            changeLanguage('fr');
-        } else {
-            currentLang = 'en';
-            langToggle.textContent = 'ENG';
-            changeLanguage('en');
-        }
+        currentLang = (currentLang === 'en') ? 'fr' : 'en';
+        langToggle.textContent = (currentLang === 'en') ? 'ENG' : 'FRE';
+        changeLanguage(currentLang);
     });
 
     function changeLanguage(lang) {
-        var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
-        if (!iframe) return;
-
-        var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-        var selectField = innerDoc.getElementsByTagName('select')[0];
-        
-        if (selectField) {
-            for(var i=0; i<selectField.options.length; i++) {
-                if(selectField.options[i].value === lang) {
-                    selectField.selectedIndex = i;
-                    selectField.dispatchEvent(new Event('change'));
-                    break;
-                }
-            }
+        const translateSelect = document.querySelector('.goog-te-combo');
+        if (translateSelect) {
+            translateSelect.value = lang;
+            translateSelect.dispatchEvent(new Event('change'));
+        } else {
+            console.error("Translation select box not found.");
         }
     }
 });
