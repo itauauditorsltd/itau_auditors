@@ -4769,9 +4769,14 @@ img {
 .offer-pic img {
   position: relative;
   z-index: 2;
+  height: 380px;
+  width: 465px;
 }
 
 /* Services List Styling */
+.services-list{
+  padding: 20px;
+}
 .services-list ul {
   padding-left: 20px;
   padding: 10px;
@@ -4781,6 +4786,8 @@ img {
 .services-list ul li {
   padding: 10px 0;
   font-size: 16px;
+  color: #6a6a6a;
+  font-family: "Hind", sans-serif;
 }
 
 .services-list ul li i {
