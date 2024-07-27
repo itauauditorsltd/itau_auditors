@@ -4599,6 +4599,7 @@ img {
 /*--------------------------------------------------------------
 #0.8    offer
 --------------------------------------------------------------*/
+
 @media screen and (min-width: 1200px) {
   .offer-text {
     padding-right: 30px;
@@ -4769,6 +4770,31 @@ img {
   position: relative;
   z-index: 2;
 }
+
+/* Services List Styling */
+.services-list ul {
+  padding-left: 20px;
+  padding: 10px;
+  list-style: none;
+}
+
+.services-list ul li {
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.services-list ul li i {
+  color: #fdc900; /* Yellow color for the check icon */
+  margin-right: 10px;
+}
+
+.services-list h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0b3356;
+}
+
 
 /*--------------------------------------------------------------
 #0.9    recent-projects

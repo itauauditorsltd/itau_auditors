@@ -11,12 +11,14 @@
 
   <!-- Page Title -->
   <title>ITAU Auditors and DPA Ltd</title>
-<!-- Favicon and Touch Icons -->
-<link href="{% static 'assets/images/favicon/favicon.png' %}" rel="shortcut icon" type="image/png" />
-<link href="{% static 'assets/images/favicon/apple-touch-icon-57x57.png' %}" rel="apple-touch-icon" sizes="57x57" />
-<link href="{% static 'assets/images/favicon/apple-touch-icon-72x72.png' %}" rel="apple-touch-icon" sizes="72x72" />
-<link href="{% static 'assets/images/favicon/apple-touch-icon-114x114.png' %}" rel="apple-touch-icon" sizes="114x114" />
-<link href="{% static 'assets/images/favicon/apple-touch-icon-144x144.png' %}" rel="apple-touch-icon" sizes="144x144" />
+  <!-- Favicon and Touch Icons -->
+  <link href="{% static 'assets/images/favicon/favicon.png' %}" rel="shortcut icon" type="image/png" />
+  <link href="{% static 'assets/images/favicon/apple-touch-icon-57x57.png' %}" rel="apple-touch-icon" sizes="57x57" />
+  <link href="{% static 'assets/images/favicon/apple-touch-icon-72x72.png' %}" rel="apple-touch-icon" sizes="72x72" />
+  <link href="{% static 'assets/images/favicon/apple-touch-icon-114x114.png' %}" rel="apple-touch-icon"
+    sizes="114x114" />
+  <link href="{% static 'assets/images/favicon/apple-touch-icon-144x144.png' %}" rel="apple-touch-icon"
+    sizes="144x144" />
 
   <!-- Icon fonts -->
   <link href={% static "assets/css/font-awesome.min.css" %} rel="stylesheet" />
@@ -196,31 +198,55 @@
     </section>
     <!-- end page-title -->
 
-    <!-- start offer -->
-    <section class="section-padding offer-section">
-      <div class="container">
-        <div class="row">
-          <div class="col col-md-5">
-            <div class="section-title-s3">
-              <h2>{{ about_us.title }}</h2>
-            </div>
-            <div class="offer-text">
-              <p>{{ about_us.description|linebreaks }}</p>
-              <a href="#" class="theme-btn read-more">Read More</a>
-              <a href="#" class="theme-btn-s2 read-more">Company history</a>
-            </div>
-          </div>
-          <div class="col col-md-7">
-            <div class="offer-pic">
-              <img src="{{ about_us.image.url }}" alt="Offer Image">
-            </div>
-          </div>
+<!-- start offer -->
+<section class="section-padding offer-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="section-title-s3">
+          <h2>About Us</h2>
         </div>
-        <!-- end row -->
+        <div class="offer-text">
+          <p>Established in 2006, we are a leading professional services firm headquartered in Kigali, Rwanda. Our team comprises national and international experts with diverse skills and extensive experience.</p>
+          <p>We are proud members of the Rwanda Organization of Professional Consultants (ROPC) and the Association of Tax Advisors of Rwanda (ATAR). As a COMPRAC (Community of Practice) member and with accreditation from the National Bank of Rwanda (NBR) for auditing SACCOs and Microfinances, we maintain the highest standards of professional excellence.</p>
+        </div>
       </div>
-      <!-- end container -->
-    </section>
-    <!-- end offer -->
+      <div class="col col-md-7">
+        <div class="offer-pic">
+          <img src="{{ about_us.image.url }}" alt="About Us Image" class="offer-img">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>Our deep understanding of Rwanda's economic and socio-cultural landscape, as well as our expertise in the Great Lakes region and East African community, enables us to deliver exceptional services in both public and private sectors. We believe that our success is intrinsically linked to the success and satisfaction of our clients.</p>
+        
+        <div class="services-list">
+          <h3>Our Comprehensive Services Include:</h3>
+        
+        <ul>
+          <li><i class="fa fa-check"></i> Baseline surveys, monitoring, and evaluation of development projects</li> 
+          <li><i class="fa fa-check"></i> Socio-economic studies and production of gender profiles</li>
+          <li><i class="fa fa-check"></i> Audit of SACCOs and Microfinances</li>
+          <li><i class="fa fa-check"></i> Accounting, tax, and financial advisory services</li>
+          <li><i class="fa fa-check"></i> Development of management tools for accounting and administration</li>
+          <li><i class="fa fa-check"></i> Preparation and award examinations in auditing and accounting</li>
+          <li><i class="fa fa-check"></i> Creation of procedure manuals</li>
+          <li><i class="fa fa-check"></i> Training in auditing, accounting, business, and management</li>
+          <li><i class="fa fa-check"></i> Representation and support in tender processes</li>
+        </ul>
+        </div>
+       
+        
+        <p>All our missions are conducted by qualified supervisors, supported by experienced teams. We ensure the highest quality standards throughout each project, providing expert guidance and innovative solutions tailored to our clients' needs.</p>
+        <p>Our reports adhere to international standards and are available in English and/or French, as per client requirements. With our efficient and flexible approach, creative problem-solving, and commitment to client satisfaction, we bring real added value to every mission we undertake.</p>
+        <p>Our diverse team of national and international experts brings a wealth of professional experience to each project. We approach each mission on a case-by-case basis, leveraging our in-depth knowledge of various sectors and the socio-economic environment. When needed, we supplement our core team with additional specialists to meet specific project requirements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end offer -->
+
 
     <!-- start cta -->
     <section class="cta section-padding parallax" data-bg-image="assets/images/cta-bg.jpg">
