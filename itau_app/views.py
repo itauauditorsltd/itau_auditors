@@ -35,6 +35,13 @@ def about_us(request):
     topHeader = CompanyInfo.objects.first()
     return render(request, 'ITAU_Auditors_Ltd/about.html', {'topHeader': topHeader,'about_us': about_us, 'features': features, 'team_members': team_members})
 
+def about_itau_auditors (request):
+    about_us = AboutUs.objects.first()
+    features = Feature.objects.all()[:3]
+    team_members = OurTeam.objects.all()
+    topHeader = CompanyInfo.objects.first()
+    return render(request, 'ITAU_Auditors_Ltd/about_itau_auditors.html', {'topHeader': topHeader,'about_us': about_us, 'features': features, 'team_members': team_members})
+
 def our_services(request):
     topHeader = CompanyInfo.objects.first()
     return render(request,'ITAU_Auditors_Ltd/services.html', {'topHeader': topHeader})
