@@ -61,8 +61,8 @@
       </div>
       <!-- end preloader -->
 
-       <!-- Start header -->
-       <header id="header" class="site-header header-style-5">
+            <!-- Start header -->
+      <header id="header" class="site-header header-style-5">
         <div class="topbar topbar-style-2">
           <div class="container">
             <div class="row">
@@ -110,8 +110,9 @@
                   </ul>
                 </div>
                 <div class="language">
-        <button id="langToggle" class="btn-lang">ENG</button>
-    </div>
+                  <button id="langToggle" class="btn-lang">ENG</button>
+                  <div id="google_translate_element" style="display:none;"></div>
+              </div>
               </div>
             </div>
           </div>
@@ -132,7 +133,7 @@
                   <div>
                     <div class="icon"><i class="fi flaticon-title"></i></div>
                     <div class="award-info">
-                      <h4>Global Certified</h4>
+                      <h4>BNR accredited</h4>
                       <p>Consulting Company</p>
                     </div>
                   </div>
@@ -165,7 +166,14 @@
               
               <ul class="nav navbar-nav">
                 <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'about_us' %}">About</a></li>
+                
+                <li class="menu-item-has-children">
+                  <a href="#">About</a>
+                  <ul class="sub-menu">
+                      <li><a href="{% url 'about_us' %}">Itau auditors & dpa ltd </a></li>
+                      <li><a href="{% url 'about_itau_auditors' %}">Itau auditors ltd</a></li>
+                  </ul>
+              </li>
                 <li><a href="{% url 'services' %}">Services</a></li>
                 <li><a href="{% url 'blog' %}">Blog</a></li>
                 <li><a href="{% url 'contact_us' %}">Contact</a></li>
