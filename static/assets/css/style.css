@@ -4775,12 +4775,12 @@ img {
 
 /* Services List Styling */
 .services-list{
+  padding-left: 0;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 .services-list ul {
   padding-left: 30px;
-  padding: 10px;
   list-style: none;
 }
 
