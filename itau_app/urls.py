@@ -26,6 +26,10 @@ urlpatterns = [
     path('training/', views.training, name="training"),
     path('managementConsulting/', views.managementConsulting, name="managementConsulting"),
     path('corporateSocialResponsibility/', views.corporateSocialResponsibility, name="corporateSocialResponsibility"),
+    path('dataAnalysis/', views.dataAnalysis, name="dataAnalysis"),
+    path('cyberSecurityReview/', views.cyberSecurityReview, name="cyberSecurityReview"),
+    path('reviewsofISOStandards/', views.reviewsofISOStandards, name="reviewsofISOStandards"),
+
 
 
     

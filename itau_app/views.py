@@ -81,6 +81,23 @@ def corporateSocialResponsibility(request):
     return render(request,'ITAU_Auditors_Ltd/CorporateSocialResponsibility.html', {'topHeader': topHeader}) 
 
 
+def dataAnalysis(request):
+    topHeader = CompanyInfo.objects.first()
+
+    return render(request,'ITAU_Auditors_Ltd/dataanalysis.html', {'topHeader': topHeader}) 
+
+
+def cyberSecurityReview(request):
+    topHeader = CompanyInfo.objects.first()
+
+    return render(request,'ITAU_Auditors_Ltd/cyberSecurityReview.html', {'topHeader': topHeader})
+
+def reviewsofISOStandards(request):
+    topHeader = CompanyInfo.objects.first()
+
+    return render(request,'ITAU_Auditors_Ltd/reviewsofISOStandards.html', {'topHeader': topHeader})
+
+
 
 def schedule(request):
     topHeader = CompanyInfo.objects.first()
