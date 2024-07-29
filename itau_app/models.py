@@ -12,11 +12,11 @@ class CompanyInfo(models.Model):
     brochure = models.FileField(upload_to='brochures/', null=True, blank=True)
     pbox = models.CharField(max_length=100, null=True, blank=True)
     
-    facebook = models.URLField(max_length=200, blank=True, null=True)
-    twitter = models.URLField(max_length=200, blank=True, null=True)
-    linkedin = models.URLField(max_length=200, blank=True, null=True)
-    pinterest = models.URLField(max_length=200, blank=True, null=True)
-    rss = models.URLField(max_length=200, blank=True, null=True)
+    facebook = models.CharField(max_length=200, blank=True, null=True)
+    twitter = models.CharField(max_length=200, blank=True, null=True)
+    linkedin = models.CharField(max_length=200, blank=True, null=True)
+    pinterest = models.CharField(max_length=200, blank=True, null=True)
+    rss = models.CharField(max_length=200, blank=True, null=True)
 
     def __str__(self):
         return f"{self.street_address} - {self.phone}"
