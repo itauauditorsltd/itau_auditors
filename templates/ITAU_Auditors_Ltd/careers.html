@@ -331,7 +331,7 @@
                           {% for career in careers %}
                           <div class="career-job">
                               <h3>{{ career.title }}</h3>
-                              <p>{{ career.description }}</p>
+                              <p>{{ career.description|safe }}</p>
                               <p><strong>Posted on:</strong> {{ career.date|date:"d M, Y" }}</p>
                               <a href="{{ career.application_link }}" class="btn btn-primary" target="_blank">Apply Now</a>
                           </div>
