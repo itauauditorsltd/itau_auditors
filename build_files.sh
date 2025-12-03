@@ -10,10 +10,10 @@ python3.9 manage.py makemigrations
 python3.9 manage.py migrate
 
 # Collect static files
-python3.9 manage.py collectstatic --noinput
+python3.9 manage.py collectstatic --noinput --clear
 
-# Create the directory if it's needed
+# Create the directory if needed
 mkdir -p staticfiles_build
 
-# Copy collected static files to the `staticfiles_build` directory
-cp -r static/* staticfiles_build/
+# Copy ALL collected static files to staticfiles_build
+cp -r staticfiles/* staticfiles_build/

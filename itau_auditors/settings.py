@@ -4,10 +4,11 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = "django-insecure--mb6qy3qap=b2i8f*y(^5lvrdq4q9rfib+==(8(g=$u1d-m3pi"
-DEBUG = True
+DEBUG = False  # Change to False for production
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
+    "whitenoise.runserver_nostatic",  # Fixed: Added missing comma
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -19,7 +20,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",  # Serve static files
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -48,7 +49,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "itau_auditors.wsgi.application"
 
-# ✅ SQLite database (good for small deployments like Render)
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
@@ -68,15 +68,15 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
 
-# ✅ Local static and media files
+# Static files configuration for Vercel
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [os.path.join(BASE_DIR / "static")]
-STATIC_ROOT = os.path.join(BASE_DIR / "staticfiles")
+STATICFILES_DIRS = [BASE_DIR / "static"]
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
-# ✅ Use WhiteNoise for serving static files in production
+# WhiteNoise configuration
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
