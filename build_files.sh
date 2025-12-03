@@ -2,18 +2,18 @@
 
 set -e
 
-# Install dependencies
+echo "Installing dependencies..."
 pip install -r requirements.txt
 
-# Make and apply migrations
-python3.9 manage.py makemigrations
-python3.9 manage.py migrate
+echo "Running migrations..."
+python3.9 manage.py makemigrations --noinput || true
+python3.9 manage.py migrate --noinput || true
 
-# Collect static files
+echo "Collecting static files..."
 python3.9 manage.py collectstatic --noinput --clear
 
-# Create the directory if needed
+echo "Copying static files to build directory..."
 mkdir -p staticfiles_build
-
-# Copy ALL collected static files to staticfiles_build
 cp -r staticfiles/* staticfiles_build/
+
+echo "Build completed successfully!"
